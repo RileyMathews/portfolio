@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarEnd} from 'bloomer'
+import {Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu} from 'bloomer'
 
 class Nav extends Component {
     state = {
