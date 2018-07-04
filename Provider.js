@@ -18,7 +18,8 @@ export class Provider extends Component {
     component.
     */
     state = {
-        
+        projects: [],
+        technologies: []
     }
 
     
