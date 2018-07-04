@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import InformationManager from "./managers/InformationManager";
 
 /*
     This new function in React - createContext() - is what will
@@ -22,6 +23,10 @@ export class Provider extends Component {
         technologies: []
     }
 
+    // import functions
+    loadTechnologies = InformationManager.loadTechnologies.bind(this)
+    loadProjects = InformationManager.loadProjects.bind(this)
+    
     
 
     /*
@@ -29,6 +34,10 @@ export class Provider extends Component {
         React.Component, you can use `componentDidMount` to
         hit your API and then update state.
     */
+    componentDidMount() {
+        this.loadTechnologies()
+        this.loadProjects()
+    }
 
 
     /*
