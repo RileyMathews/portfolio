@@ -7,7 +7,11 @@ class Nav extends Component {
     }
 
     onClickNav = (evt) => {
+        // change state for mobile drop down active
         this.setState({isActive: this.state.isActive ? false : true})
+        if (evt.target.id !== "") {
+            this.props.setView(evt)
+        }
     }
 
     render() {
@@ -17,10 +21,10 @@ class Nav extends Component {
                     <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
                 </NavbarBrand>
                 <NavbarMenu isActive={this.state.isActive}>
-                    <NavbarItem id="nav__profile" onClick={this.onClickNav}>Home</NavbarItem>
-                    <NavbarItem id="nav__search" onClick={this.onClickNav}>Projects</NavbarItem>
-                    <NavbarItem id="nav__suggest" onClick={this.onClickNav}>About Me</NavbarItem>
-                    <NavbarItem id="nav__logout" onClick={this.onClickNav}>Contact</NavbarItem>
+                    <NavbarItem id="nav__home" onClick={this.onClickNav}>Home</NavbarItem>
+                    <NavbarItem id="nav__projects" onClick={this.onClickNav}>Projects</NavbarItem>
+                    <NavbarItem id="nav__about" onClick={this.onClickNav}>About Me</NavbarItem>
+                    <NavbarItem id="nav__contact" onClick={this.onClickNav}>Contact</NavbarItem>
                 </NavbarMenu>
             </Navbar>
         )

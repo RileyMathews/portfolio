@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import InformationManager from "./managers/InformationManager";
+import ViewManager from "./managers/ViewManager";
 
 /*
     This new function in React - createContext() - is what will
@@ -20,12 +21,18 @@ export class Provider extends Component {
     */
     state = {
         projects: [],
-        technologies: []
+        technologies: [],
+        currentView: "home"
     }
 
     // import functions
+    // information manager
     loadTechnologies = InformationManager.loadTechnologies.bind(this)
     loadProjects = InformationManager.loadProjects.bind(this)
+
+    // view manager
+    setView = ViewManager.setView.bind(this)
+    showView = ViewManager.showView.bind(this)
     
     
 
@@ -49,6 +56,8 @@ export class Provider extends Component {
         return (
             <Context.Provider value={{
                 state: this.state,
+                setView: this.setView,
+                showView: this.showView,
                 
             }}>
                 {this.props.children}
