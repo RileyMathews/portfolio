@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './nav/Nav';
 import { Provider } from './Provider';
+import HomePage from './home/HomePage';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
       <div>
         <Provider>
           <Nav />
-          <h1>Riley Mathews</h1>
+          <HomePage />
         </Provider>
       </div>
     );
