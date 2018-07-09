@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './nav/Nav';
 import { Provider, Context } from './Provider';
+import { Container } from '../node_modules/bloomer/lib/layout/Container';
 
 class App extends Component {
 
@@ -18,12 +19,14 @@ class App extends Component {
         <Context.Consumer>
           {context => (
             <div>
-              <Nav setView={context.setView}/>
+              <Nav setView={context.setView} />
               {/* 
                   the show view function renders
                   a component based on currentView state in provider
                 */}
-              {context.showView()}
+              <Container>
+                {context.showView()}
+              </Container>
             </div>
           )}
         </Context.Consumer>

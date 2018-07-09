@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Title } from 'bloomer/lib/elements/Title';
 import { Context } from '../Provider';
 import Project from './Project';
+import { Columns } from '../../node_modules/bloomer/lib/grid/Columns';
 
 
 class Projects extends Component {
@@ -13,7 +14,7 @@ class Projects extends Component {
                 <Title isSize={2}>Projects</Title>
                 <Context.Consumer>
                     {context => (
-                        <div>
+                        <Columns isMultiline={true}>
                             {context.state.projects.map(project => (
                                 <Project 
                                     name={project.name}
@@ -23,7 +24,7 @@ class Projects extends Component {
                                     key={project.id}
                                 />
                             ))}
-                        </div>
+                        </Columns>
                     )
                     }
                 </Context.Consumer>
