@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, CardHeader, CardHeaderTitle, Icon, CardHeaderIcon, CardContent, Media, MediaLeft, Content } from 'bloomer'
+import { Card, CardHeader, CardHeaderTitle, Icon, CardContent, Media, MediaLeft, Content } from 'bloomer'
 
 
 class Project extends Component {
@@ -12,9 +12,6 @@ class Project extends Component {
                     <CardHeaderTitle>
                         {this.props.name}
                     </CardHeaderTitle>
-                    <CardHeaderIcon>
-                        <Icon className="fa fa-angle-down" />
-                    </CardHeaderIcon>
                 </CardHeader>
                 <CardContent>
                     <Media>
