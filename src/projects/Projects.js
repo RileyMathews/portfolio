@@ -20,6 +20,7 @@ class Projects extends Component {
                                     description={project.description}
                                     github_url={project.github_url}
                                     live_url={project.live_url}
+                                    key={project.id}
                                 />
                             ))}
                         </div>
