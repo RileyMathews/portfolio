@@ -1,6 +1,7 @@
 import React from 'react'
 import HomePage from "../home/HomePage";
 import Projects from '../projects/Projects';
+import AboutView from '../about/AboutView';
 
 /* 
     module: view manager
@@ -34,6 +35,8 @@ const ViewManager = Object.create(null, {
                     return <HomePage />
                 case "projects":
                     return <Projects />
+                case "about":
+                    return <AboutView />
             }
         }
     }
