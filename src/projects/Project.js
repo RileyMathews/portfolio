@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardHeader, CardHeaderTitle, Icon, CardContent, Media, MediaLeft, Content, Column } from 'bloomer'
 
-
 class Project extends Component {
 
 
@@ -17,8 +16,8 @@ class Project extends Component {
                     <CardContent>
                         <Media>
                             <MediaLeft>
-                                <a className="link_icon" href={this.props.github_url} target="_blank"><Icon isSize="medium" className="fab fa-github fa-2x" /></a>
-                                <a className="link_icon" href={this.props.live_url} target="_blank"><Icon issize="medium" className="fas fa-globe fa-2x" /></a>
+                                <a className="link_icon" href={this.props.github_url} target="_blank"><Icon className="fab fa-github fa-lg" /></a>
+                                <a className="link_icon" href={this.props.live_url} target="_blank"><Icon className="fas fa-globe fa-lg" /></a>
                             </MediaLeft>
                         </Media>
                         <Content>
