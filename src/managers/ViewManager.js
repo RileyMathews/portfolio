@@ -2,6 +2,7 @@ import React from 'react'
 import HomePage from "../home/HomePage";
 import Projects from '../projects/Projects';
 import AboutView from '../about/AboutView';
+import ContactView from '../contact/ContactView';
 
 /* 
     module: view manager
@@ -37,6 +38,8 @@ const ViewManager = Object.create(null, {
                     return <Projects />
                 case "about":
                     return <AboutView />
+                case "contact":
+                    return <ContactView />
             }
         }
     }
