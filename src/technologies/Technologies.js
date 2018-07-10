@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Context } from '../Provider';
 import Technology from './Technology';
+import { Columns } from '../../node_modules/bloomer/lib/grid/Columns';
+import './Technologies.css'
 
 
 class Technologies extends Component {
@@ -10,11 +12,11 @@ class Technologies extends Component {
         return (
                 <Context.Consumer>
                     {context => (
-                        <div>
+                        <Columns className="tech_column" isMultiline={true}>
                             {context.state.technologies.map(technology => (
                                 <Technology technology={technology} key={technology.id}/>
                             ))}
-                        </div>
+                        </Columns>
                     )
 
                     }
