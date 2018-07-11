@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './nav/Nav';
 import { Provider, Context } from './Provider';
 import { Container } from '../node_modules/bloomer/lib/layout/Container';
+import ApplicationViews from './router/ApplicationViews';
 
 class App extends Component {
 
@@ -25,7 +26,7 @@ class App extends Component {
                   a component based on currentView state in provider
                 */}
               <Container>
-                {context.showView()}
+                <ApplicationViews />
               </Container>
             </div>
           )}

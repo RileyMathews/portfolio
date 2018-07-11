@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import {Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu} from 'bloomer'
 
 class Nav extends Component {
@@ -9,9 +10,6 @@ class Nav extends Component {
     onClickNav = (evt) => {
         // change state for mobile drop down active
         this.setState({isActive: this.state.isActive ? false : true})
-        if (evt.target.id !== "") {
-            this.props.setView(evt)
-        }
     }
 
     render() {
@@ -21,10 +19,10 @@ class Nav extends Component {
                     <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
                 </NavbarBrand>
                 <NavbarMenu isActive={this.state.isActive}>
-                    <NavbarItem id="nav__home" onClick={this.onClickNav}>Home</NavbarItem>
-                    <NavbarItem id="nav__projects" onClick={this.onClickNav}>Projects</NavbarItem>
-                    <NavbarItem id="nav__about" onClick={this.onClickNav}>About Me</NavbarItem>
-                    <NavbarItem id="nav__contact" onClick={this.onClickNav}>Contact</NavbarItem>
+                    <Link to="/"><NavbarItem onClick={this.onClickNav}>Home</NavbarItem></Link>
+                    <Link to="/projects"><NavbarItem onClick={this.onClickNav}>Projects</NavbarItem></Link>
+                    <Link to="/about"><NavbarItem onClick={this.onClickNav}>About Me</NavbarItem></Link>
+                    <Link to="/contact"><NavbarItem onClick={this.onClickNav}>Contact</NavbarItem></Link>
                 </NavbarMenu>
             </Navbar>
         )
