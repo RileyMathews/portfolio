@@ -22,23 +22,23 @@ p {
 
 .card_focused {
     /* position: fixed; */
+    z-index: 2;
 }
 
 .tech_modal_hidden {
     visibility: hidden;
     z-index: 1;
     position: absolute;
-    transform: scale(1);
+    top: -50px
 }
 
 .tech_modal_shown {
     visibility: visible;
     transition: transform 1s;
-    transform: scale(1.2);
+    transform: position(top, 0);
     pointer-events: none;
-    display: inline;
+    display: inline-block;
     position: absolute;
     z-index: 1;
     background-color: white;
-    top: -50px;
 }
