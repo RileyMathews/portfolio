@@ -8,10 +8,10 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Title isSize={2}>Riley Mathews</Title>
                 <Technologies />
-            </div>
+            </React.Fragment>
         )
     }
 }

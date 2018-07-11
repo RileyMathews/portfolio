@@ -10,7 +10,7 @@ class Projects extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Title isSize={2}>Projects</Title>
                 <Context.Consumer>
                     {context => (
@@ -28,7 +28,7 @@ class Projects extends Component {
                     )
                     }
                 </Context.Consumer>
-            </div>
+            </React.Fragment>
         )
     }
 }
