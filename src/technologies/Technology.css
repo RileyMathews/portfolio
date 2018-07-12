@@ -20,25 +20,38 @@ p {
     position: relative; */
 }
 
-.card_focused {
-    /* position: fixed; */
+/* .card_focused {
     z-index: 2;
+}
+
+.tech_modal {
+    position: absolute;
+    width: 10rem;
+    overflow: hidden;
+    top: -50px;
 }
 
 .tech_modal_hidden {
     visibility: hidden;
     z-index: 1;
-    position: absolute;
-    top: -50px
 }
 
 .tech_modal_shown {
     visibility: visible;
-    transition: transform 1s;
-    transform: position(top, 0);
     pointer-events: none;
     display: inline-block;
-    position: absolute;
     z-index: 1;
     background-color: white;
+} */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
 }

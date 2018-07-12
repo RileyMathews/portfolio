@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Technology.css'
 import { Column } from '../../node_modules/bloomer/lib/grid/Column';
 import { Card } from '../../node_modules/bloomer/lib/components/Card/Card';
+const $ = require('jquery')
 
 
 class Technology extends Component {
@@ -11,11 +12,11 @@ class Technology extends Component {
     }
 
     onCardHover = () => {
-        this.setState({ descriptionIsVisible: true })
+        $(`#dropdown_tech_${this.props.technology.id}`).slideDown()
     }
 
     onCardLeave = () => {
-        this.setState({ descriptionIsVisible: false })
+        $(`#dropdown_tech_${this.props.technology.id}`).slideUp()
     }
 
     // cardView = () => {
@@ -27,12 +28,16 @@ class Technology extends Component {
     // }
 
 
+
+
+
+
     render() {
         return (
-            <Column isSize={2} className={this.state.descriptionIsVisible ? "column_focused" : null}>
-                <Card className={this.state.descriptionIsVisible ? "tech_card card_focused" : "tech_card"} onMouseEnter={this.onCardHover} onMouseLeave={this.onCardLeave}>
+            <Column isSize={3} className="dropdown">
+                <Card className="dropdown-hover" onMouseEnter={this.onCardHover} onMouseLeave={this.onCardLeave}>
                     <img className="tech_logo" src={this.props.technology.img_url} alt={`${this.props.technology.name} logo`} />
-                    <Card className={this.state.descriptionIsVisible ? "tech_modal_shown" : "tech_modal_hidden"}>
+                    <Card className="dropdown-content" id={`dropdown_tech_${this.props.technology.id}`}>
                         <p>{this.props.technology.description}</p>
                     </Card>
                 </Card>
