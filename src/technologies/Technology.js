@@ -19,18 +19,6 @@ class Technology extends Component {
         $(`#dropdown_tech_${this.props.technology.id}`).slideUp()
     }
 
-    // cardView = () => {
-    //     if (this.state.descriptionIsVisible) {
-    //         return <p>{this.props.technology.description}</p>
-    //     } else {
-    //         return (<img className="tech_logo" src={this.props.technology.img_url} alt={`${this.props.technology.name} logo`} />)
-    //     }
-    // }
-
-
-
-
-
 
     render() {
         return (
