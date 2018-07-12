@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './nav/Nav';
 import { Provider, Context } from './Provider';
-import { Container } from '../node_modules/bloomer/lib/layout/Container';
 import ApplicationViews from './router/ApplicationViews';
 
 class App extends Component {
