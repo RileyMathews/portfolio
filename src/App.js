@@ -25,9 +25,7 @@ class App extends Component {
                                 Application views will return a component
                                 based on the current url
                             */}
-                            <Container>
                                 <ApplicationViews />
-                            </Container>
                         </React.Fragment>
                     )}
                 </Context.Consumer>

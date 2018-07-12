@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Title } from 'bloomer/lib/elements/Title';
 import Technologies from '../technologies/Technologies';
+import HomeBanner from './HomeBanner';
 
 
 class HomePage extends Component {
@@ -9,7 +10,7 @@ class HomePage extends Component {
     render() {
         return (
             <React.Fragment>
-                <Title isSize={2}>Riley Mathews</Title>
+                <HomeBanner />
                 <Technologies />
             </React.Fragment>
         )
