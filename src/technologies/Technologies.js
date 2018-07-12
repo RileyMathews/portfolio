@@ -3,6 +3,7 @@ import { Context } from '../Provider';
 import Technology from './Technology';
 import { Columns } from '../../node_modules/bloomer/lib/grid/Columns';
 import './Technologies.css'
+import { Container } from '../../node_modules/bloomer/lib/layout/Container';
 
 
 class Technologies extends Component {
@@ -10,17 +11,17 @@ class Technologies extends Component {
 
     render() {
         return (
-                <Context.Consumer>
-                    {context => (
+            <Context.Consumer>
+                {context => (
+                    <Container>
                         <Columns className="tech_column" isMultiline={true}>
                             {context.state.technologies.map(technology => (
-                                <Technology technology={technology} key={technology.id}/>
+                                <Technology technology={technology} key={technology.id} />
                             ))}
                         </Columns>
-                    )
-
-                    }
-                </Context.Consumer>
+                    </Container>
+                )}
+            </Context.Consumer>
         )
     }
 }
