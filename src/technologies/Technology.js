@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Technology.css'
 import { Column } from '../../node_modules/bloomer/lib/grid/Column';
 import { Card } from '../../node_modules/bloomer/lib/components/Card/Card';
-const $ = require('jquery')
+import $ from 'jquery';
 
 
 class Technology extends Component {

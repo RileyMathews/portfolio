@@ -21,7 +21,8 @@ export class Provider extends Component {
     state = {
         projects: [],
         technologies: [],
-        currentView: "home"
+        currentView: "home",
+        loadAnimationPlayed: false
     }
 
     // import functions
@@ -42,6 +43,11 @@ export class Provider extends Component {
         this.loadProjects()
     }
 
+    // function to handle setting the load animation boolean
+    animationHasPlayed = bool => {
+        this.setState({ loadAnimationPlayed: bool })
+    }
+
 
     /*
         This component will not render any DOM element itself.
@@ -54,6 +60,7 @@ export class Provider extends Component {
                 state: this.state,
                 setView: this.setView,
                 showView: this.showView,
+                animationHasPlayed: this.animationHasPlayed
                 
             }}>
                 {this.props.children}
