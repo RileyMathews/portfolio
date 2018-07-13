@@ -13,7 +13,7 @@ class Projects extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <Title isSize={2}>Projects</Title>
+                    <Title>Projects</Title>
                     <Context.Consumer>
                         {context => (
                             <Columns isMultiline={true}>

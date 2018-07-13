@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Title } from '../../node_modules/bloomer/lib/elements/Title';
+import { Container } from '../../node_modules/bloomer/lib/layout/Container';
+import Bio from './Bio';
 
 
 class AboutView extends Component {
@@ -7,9 +9,10 @@ class AboutView extends Component {
 
     render() {
         return (
-            <div>
+            <Container>
                 <Title>About Me</Title>
-            </div>
+                <Bio />
+            </Container>
         )
     }
 }

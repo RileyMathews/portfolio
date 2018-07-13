@@ -1,6 +1,6 @@
 import APIManager from "./APIManager";
 
-/* 
+/*
     module: information manager
     purpose: to handle setting top level data for the app
     author: riley
@@ -22,6 +22,17 @@ const InformationManager = Object.create(null, {
                 .then(r => r.json())
                 .then(projectsResponse => {
                     this.setState({projects: projectsResponse})
+                })
+        }
+    },
+    loadBio: {
+        value: function () {
+            APIManager.get("about")
+                .then(r => r.json())
+                .then(biography => {
+                    console.log(biography)
+                    const bio = biography[0].bio
+                    this.setState({biography: bio})
                 })
         }
     }

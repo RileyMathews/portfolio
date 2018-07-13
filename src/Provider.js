@@ -30,8 +30,8 @@ export class Provider extends Component {
     loadTechnologies = InformationManager.loadTechnologies.bind(this)
     loadProjects = InformationManager.loadProjects.bind(this)
 
-    
-    
+
+
 
     /*
         Since this is just an ordinary component that extends
@@ -61,7 +61,7 @@ export class Provider extends Component {
                 setView: this.setView,
                 showView: this.showView,
                 animationHasPlayed: this.animationHasPlayed
-                
+
             }}>
                 {this.props.children}
             </Context.Provider>

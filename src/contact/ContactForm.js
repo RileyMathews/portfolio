@@ -25,9 +25,6 @@ class ContactForm extends Component {
                         <Icon isSize='small' isAlign='left'>
                             <span className="fa fa-envelope" aria-hidden="true" />
                         </Icon>
-                        <Icon isSize='small' isAlign='right'>
-                            <span className="fa fa-check" aria-hidden="true" />
-                        </Icon>
                     </Control>
                 </Field>
 

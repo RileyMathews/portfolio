@@ -26,7 +26,7 @@ class Technology extends Component {
                 <Card className="dropdown-hover" onMouseEnter={this.onCardHover} onMouseLeave={this.onCardLeave}>
                     <img className="tech_logo" src={this.props.technology.img_url} alt={`${this.props.technology.name} logo`} />
                     <Card className="dropdown-content" id={`dropdown_tech_${this.props.technology.id}`}>
-                        <p>{this.props.technology.description}</p>
+                        <p className="tech_description">{this.props.technology.description}</p>
                     </Card>
                 </Card>
             </Column>
