@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarEnd, Icon } from 'bloomer'
+import './Nav.css'
 
 class Nav extends Component {
     state = {
@@ -19,10 +20,10 @@ class Nav extends Component {
                     <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
                 </NavbarBrand>
                 <NavbarMenu isActive={this.state.isActive}>
-                    <NavbarItem onClick={this.onClickNav}><Link to="/">Home</Link></NavbarItem>
-                    <NavbarItem onClick={this.onClickNav}><Link to="/projects">Projects</Link></NavbarItem>
-                    <NavbarItem onClick={this.onClickNav}><Link to="/about">About Me</Link></NavbarItem>
-                    <NavbarItem onClick={this.onClickNav}><Link to="/contact">Contact</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link className="nav_link" to="/">Home</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link className="nav_link" to="/projects">Projects</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link className="nav_link" to="/about">About Me</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link className="nav_link" to="/contact">Contact</Link></NavbarItem>
                     <NavbarEnd>
                         <NavbarItem href="https://github.com/RileyMathews" target="_blank" isHidden='touch'>
                             <Icon className='fab fa-github' />
