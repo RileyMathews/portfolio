@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Title } from '../../node_modules/bloomer/lib/elements/Title';
-import ContactForm from './ContactForm';
 import { Container } from '../../node_modules/bloomer/lib/layout/Container';
+import ContactInfo from './ContactInfo';
 
 
 class ContactView extends Component {
@@ -12,7 +12,7 @@ class ContactView extends Component {
             <React.Fragment>
                 <Container>
                     <Title>Contact</Title>
-                    <ContactForm />
+                    <ContactInfo />
                 </Container>
             </React.Fragment>
         )
