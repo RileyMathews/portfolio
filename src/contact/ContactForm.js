@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Field, Label, Control, Input, Icon, Help, Select, TextArea, Button} from 'bloomer'
+import {Field, Label, Control, Input, Icon, TextArea, Button} from 'bloomer'
 
 
 class ContactForm extends Component {
