@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import {Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu} from 'bloomer'
+import { Link } from 'react-router-dom'
+import { Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarEnd, Icon } from 'bloomer'
 
 class Nav extends Component {
     state = {
@@ -9,7 +9,7 @@ class Nav extends Component {
 
     onClickNav = (evt) => {
         // change state for mobile drop down active
-        this.setState({isActive: this.state.isActive ? false : true})
+        this.setState({ isActive: this.state.isActive ? false : true })
     }
 
     render() {
@@ -19,10 +19,18 @@ class Nav extends Component {
                     <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
                 </NavbarBrand>
                 <NavbarMenu isActive={this.state.isActive}>
-                    <Link to="/"><NavbarItem onClick={this.onClickNav}>Home</NavbarItem></Link>
-                    <Link to="/projects"><NavbarItem onClick={this.onClickNav}>Projects</NavbarItem></Link>
-                    <Link to="/about"><NavbarItem onClick={this.onClickNav}>About Me</NavbarItem></Link>
-                    <Link to="/contact"><NavbarItem onClick={this.onClickNav}>Contact</NavbarItem></Link>
+                    <NavbarItem onClick={this.onClickNav}><Link to="/">Home</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link to="/projects">Projects</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link to="/about">About Me</Link></NavbarItem>
+                    <NavbarItem onClick={this.onClickNav}><Link to="/contact">Contact</Link></NavbarItem>
+                    <NavbarEnd>
+                        <NavbarItem href="https://github.com/RileyMathews" target="_blank" isHidden='touch'>
+                            <Icon className='fab fa-github' />
+                        </NavbarItem>
+                        <NavbarItem href="http://linkedin.com/in/riley-mathews" target="_blank" isHidden='touch'>
+                            <Icon className='fab fa-linkedin' />
+                        </NavbarItem>
+                    </NavbarEnd>
                 </NavbarMenu>
             </Navbar>
         )
