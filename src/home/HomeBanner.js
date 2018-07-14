@@ -9,21 +9,39 @@ import $ from 'jquery';
 
 class HomeBanner extends Component {
 
+    state = {
+        subtitle: "",
+        subtitleText: "Full-Stack Software Developer",
+        subTitlePrinted: false
+    }
 
     componentDidMount() {
         if (!this.props.loadAnimationPlayed) {
             $("#main_title").animate({
                 fontSize: '2rem',
                 opacity: 1,
-                left: '+=100px'
-            }, 2000, function () { })
-            $("#main_subtitle").animate({
-                fontSize: '2rem',
-                opacity: 1,
-                left: '-=100px'
-            }, 2000, function () {
+                top: '+=100px'
+            }, 2000, function () { 
                 this.props.animationHasPlayed(true)
+                this.typeOutSubtitle()
             }.bind(this))
+        }
+        if (this.props.loadAnimationPlayed === true && this.state.subTitlePrinted === false) {
+            this.typeOutSubtitle()
+        }
+    }
+
+    typeOutSubtitle = () => {
+        const text = this.state.subtitleText
+        for (var i = 0; i < text.length; i++) {
+            ((index) => {
+                setTimeout(() => {
+                    this.setState({ subtitle: this.state.subtitle + text[index]})
+                }, 60 * i)
+            })(i);
+        }
+        if (this.state.subtitle === this.state.subtitleText) {
+            this.setState({subTitlePrinted: true})
         }
     }
 
@@ -42,28 +60,19 @@ class HomeBanner extends Component {
                                     {
                                         fontSize: '1rem',
                                         opacity: 0,
-                                        left: '-100px',
+                                        top: '-100px',
                                         position: 'relative'
                                     }
                             }
                             id="main_title">
                             Riley Mathews
                         </Title>
-                        <Subtitle
-                            style={
-                                this.props.loadAnimationPlayed ?
-                                    null
-                                    :
-                                    {
-                                        fontSize: '1rem',
-                                        opacity: 0,
-                                        left: '+100px',
-                                        position: 'relative'
-                                    }
-                            }
-                            id="main_subtitle"
-                            isSize={3}>
-                            Full-Stack Software Developer
+                        <Subtitle id="main_subtitle" isSize={3}>
+                        {this.props.loadAnimationPlayed === true && this.state.subTitlePrinted === true ? 
+                        this.state.subtitleText
+                        :
+                        this.state.subtitle
+                        }
                         </Subtitle>
                     </Container>
                 </HeroBody>
