@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Title } from '../../node_modules/bloomer/lib/elements/Title';
 import { Icon } from '../../node_modules/bloomer/lib/elements/Icon';
 import './ContactInfo.css'
 
