@@ -151,7 +151,8 @@ export class Provider extends Component {
             }
         ],
         currentView: "home",
-        loadAnimationPlayed: false
+        loadAnimationPlayed: false,
+        subtitlePrinted: false
     }
 
     // import functions
@@ -177,6 +178,10 @@ export class Provider extends Component {
         this.setState({ loadAnimationPlayed: bool })
     }
 
+    subtitleHasPrinted = bool => {
+        this.setState({ subtitlePrinted: bool})
+    }
+
 
     /*
         This component will not render any DOM element itself.
@@ -189,7 +194,8 @@ export class Provider extends Component {
                 state: this.state,
                 setView: this.setView,
                 showView: this.showView,
-                animationHasPlayed: this.animationHasPlayed
+                animationHasPlayed: this.animationHasPlayed,
+                subtitleHasPrinted: this.subtitleHasPrinted
 
             }}>
                 {this.props.children}

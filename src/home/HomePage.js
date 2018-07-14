@@ -14,7 +14,9 @@ class HomePage extends Component {
                     <React.Fragment>
                         <HomeBanner 
                             loadAnimationPlayed={context.state.loadAnimationPlayed}
+                            subtitlePrinted={context.state.subtitlePrinted}
                             animationHasPlayed={context.animationHasPlayed}
+                            subtitleHasPrinted={context.subtitleHasPrinted}
                         />
                         <Technologies />
                     </React.Fragment>

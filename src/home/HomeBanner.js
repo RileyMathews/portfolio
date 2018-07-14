@@ -21,12 +21,12 @@ class HomeBanner extends Component {
                 fontSize: '2rem',
                 opacity: 1,
                 top: '+=100px'
-            }, 2000, function () { 
+            }, 2000, function() {
                 this.props.animationHasPlayed(true)
                 this.typeOutSubtitle()
             }.bind(this))
         }
-        if (this.props.loadAnimationPlayed === true && this.state.subTitlePrinted === false) {
+        if (this.props.loadAnimationPlayed === true && this.props.subtitlePrinted === false) {
             this.typeOutSubtitle()
         }
     }
@@ -36,12 +36,21 @@ class HomeBanner extends Component {
         for (var i = 0; i < text.length; i++) {
             ((index) => {
                 setTimeout(() => {
-                    this.setState({ subtitle: this.state.subtitle + text[index]})
+                    this.setState({ subtitle: this.state.subtitle + text[index] })
+                    if (this.state.subtitle === this.state.subtitleText) {
+                        this.props.subtitleHasPrinted(true)
+                    }
                 }, 60 * i)
             })(i);
         }
-        if (this.state.subtitle === this.state.subtitleText) {
-            this.setState({subTitlePrinted: true})
+    }
+
+    // code to kill timeout function if page is left before print animation plays
+    componentWillUnmount() {
+        var highestTimeoutId = setTimeout(";");
+        for (var i = 0; i < highestTimeoutId; i++) {
+            console.log(i)
+            clearTimeout(i);
         }
     }
 
@@ -68,11 +77,11 @@ class HomeBanner extends Component {
                             Riley Mathews
                         </Title>
                         <Subtitle id="main_subtitle" isSize={3}>
-                        {this.props.loadAnimationPlayed === true && this.state.subTitlePrinted === true ? 
-                        this.state.subtitleText
-                        :
-                        this.state.subtitle
-                        }
+                            {this.props.loadAnimationPlayed === true && this.props.subtitlePrinted === true ?
+                                this.state.subtitleText
+                                :
+                                this.state.subtitle
+                            }
                         </Subtitle>
                     </Container>
                 </HeroBody>
