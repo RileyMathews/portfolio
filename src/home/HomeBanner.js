@@ -49,7 +49,6 @@ class HomeBanner extends Component {
     componentWillUnmount() {
         var highestTimeoutId = setTimeout(";");
         for (var i = 0; i < highestTimeoutId; i++) {
-            console.log(i)
             clearTimeout(i);
         }
     }
