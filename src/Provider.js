@@ -147,7 +147,7 @@ export class Provider extends Component {
                 "id": 20,
                 "name": "jQuery",
                 "img_url": "http://pluspng.com/img-png/jquery-logo-png--800.gif",
-                "description": "After learning about jQuery its hard to go back to the vanilla javascript way. I use jQuery mostly for its very helpful AJAX methods to interact with the APIs for my projects. But on top of that it has many other super helpful methods that make the simple yet verbose code blocks of plain javascript even simpler to write."
+                "description": "After learning about jQuery its hard to go back to the vanilla javascript way. I use jQuery mostly for its very helpful AJAX methods to interact with the APIs for my projects. But on top of that it has many other helpful methods that make the simple yet verbose code blocks of plain javascript even simpler to write."
             }
         ],
         currentView: "home",
