@@ -11,7 +11,7 @@ class AboutView extends Component {
         return (
             <Container>
                 <div className="centered_text">
-                <Title>About Me</Title>
+                    <Title>About Me</Title>
                 </div>
                 <Bio />
             </Container>
