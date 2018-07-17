@@ -19,11 +19,15 @@ class Technology extends Component {
         $(`#dropdown_tech_${this.props.technology.id}`).slideUp()
     }
 
+    toggleDropDown = () => {
+        $(`#dropdown_tech_${this.props.technology.id}`).slideToggle()
+    }
+
 
     render() {
         return (
             <Column isSize={3} className="dropdown">
-                <Card className="dropdown-hover" onMouseEnter={this.onCardHover} onMouseLeave={this.onCardLeave}>
+                <Card className="dropdown-hover" onMouseEnter={this.toggleDropDown} onMouseLeave={this.onCardLeave} onClick={this.toggleDropDown}>
                     <img className="tech_logo" src={this.props.technology.img_url} alt={`${this.props.technology.name} logo`} />
                     <Card className="dropdown-content" id={`dropdown_tech_${this.props.technology.id}`}>
                         <p className="tech_description">{this.props.technology.description}</p>
