@@ -10,7 +10,9 @@ class AboutView extends Component {
     render() {
         return (
             <Container>
+                <div className="centered_text">
                 <Title>About Me</Title>
+                </div>
                 <Bio />
             </Container>
         )

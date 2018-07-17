@@ -13,7 +13,9 @@ class Projects extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <Title>Projects</Title>
+                    <div className="centered_text">
+                        <Title>Projects</Title>
+                    </div>
                     <Context.Consumer>
                         {context => (
                             <Columns isMultiline={true}>
