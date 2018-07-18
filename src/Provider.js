@@ -123,13 +123,13 @@ export class Provider extends Component {
                 "id": 16,
                 "name": "Python",
                 "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2000px-Python-logo-notext.svg.png",
-                "description": ""
+                "description": "Python is the language we used for our server side projects."
             },
             {
                 "id": 17,
                 "name": "Django",
                 "img_url": "https://www.djangoproject.com/m/img/logos/django-logo-negative.png",
-                "description": ""
+                "description": "Django is a very powerful server side frameowrk built on python, and it is what we used as our framework for our server side projects."
             },
             {
                 "id": 18,
@@ -141,7 +141,7 @@ export class Provider extends Component {
                 "id": 19,
                 "name": "SQL",
                 "img_url": "https://uploads.toptal.io/blog/category/logo/60/sql.png",
-                "description": ""
+                "description": "SQL is the driving force behind our databases. We used it to store information for our back end projects and used python and django to query the database."
             },
             {
                 "id": 20,
