@@ -9,12 +9,12 @@ import ContactView from '../contact/ContactView';
 export default class ApplicationViews extends Component {
     render() {
         return (
-            <React.Fragment>
+            <div>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/projects" component={Projects} />
                 <Route path="/about" component={AboutView} />
                 <Route path="/contact" component={ContactView} />
-            </React.Fragment>
+            </div>
         )
     }
 }

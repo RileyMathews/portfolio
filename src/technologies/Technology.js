@@ -27,7 +27,7 @@ class Technology extends Component {
     render() {
         return (
             <Column isSize={3} className="dropdown">
-                <Card className="dropdown-hover" onMouseEnter={this.toggleDropDown} onMouseLeave={this.onCardLeave} onClick={this.toggleDropDown}>
+                <Card className="dropdown-hover" onMouseEnter={this.onCardHover} onMouseLeave={this.onCardLeave} onClick={this.onCardLeave}>
                     <img className="tech_logo" src={this.props.technology.img_url} alt={`${this.props.technology.name} logo`} />
                     <Card className="dropdown-content" id={`dropdown_tech_${this.props.technology.id}`}>
                         <p className="tech_description">{this.props.technology.description}</p>

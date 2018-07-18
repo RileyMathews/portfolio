@@ -15,7 +15,7 @@ class Nav extends Component {
 
     render() {
         return (
-            <Navbar className="is-fixed-top">
+            <Navbar className="is-fixed-top" style={{ border: 'solid 1px black', margin: '0' }}>
                 <NavbarBrand>
                     <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
                 </NavbarBrand>
