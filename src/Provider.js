@@ -26,6 +26,13 @@ export class Provider extends Component {
                 "description": "GameStone helps you in discovering new video games based on games you have saved to a dynamic and managable collection of games. GameStone was built using the react framework.",
                 "github_url": "https://github.com/RileyMathews/capstone",
                 "live_url": "http://gamestone.rileymathews.com"
+            },
+            {
+                "id": 1,
+                "name": "nutshell",
+                "description": "Nutshell was our last group project at NSS before we learned frameworks with react. The site is a simple CRUD application that allows users to create posts, events, tasks, and chat with each other (sort of). It was built using vanilla javascript with a heavy dose of jQuery.",
+                "github_url": "https://github.com/nss-fumbling-penguins/nutshell",
+                "live_url": "http://nss-nutshell.s3-website.us-east-2.amazonaws.com/"
             }
         ],
         technologies: [
@@ -39,7 +46,7 @@ export class Provider extends Component {
                 "id": 2,
                 "name": "Git",
                 "img_url": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
-                "description": "Our instructors pounded into us every day about how we should always be 'adding, committing, and pushing'. Git seemed like a minor annoyance at first, but I quickly realized what a powerful tool it can be. It helps serving as a valuable history, and workflow aid for any development team"
+                "description": "Our instructors told us every day that we should always be 'adding, committing, and pushing'. Git seemed like a minor annoyance at first, but I quickly realized what a powerful tool it can be. It helps serving as a valuable history, version management, and workflow aid for any development team."
             },
             {
                 "id": 3,
@@ -129,7 +136,7 @@ export class Provider extends Component {
                 "id": 17,
                 "name": "Django",
                 "img_url": "https://www.djangoproject.com/m/img/logos/django-logo-negative.png",
-                "description": "Django is a very powerful server side frameowrk built on python, and it is what we used as our framework for our server side projects."
+                "description": "Django is a very powerful server side frameowrk built on python, and it is what we used as our framework for our server side projects. We used in many ways from serving as a REST api, to serving up enter server side web apps."
             },
             {
                 "id": 18,
@@ -141,7 +148,7 @@ export class Provider extends Component {
                 "id": 19,
                 "name": "SQL",
                 "img_url": "https://uploads.toptal.io/blog/category/logo/60/sql.png",
-                "description": "SQL is the driving force behind our databases. We used it to store information for our back end projects and used python and django to query the database."
+                "description": "SQL is the driving force behind our databases. We used it to store information for our back end projects and used python and django to do SQL queries."
             },
             {
                 "id": 20,
